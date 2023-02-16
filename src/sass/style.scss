@@ -19,8 +19,24 @@ body {
 	width: 100%;
 }
 
-
 //NAV
+.transition-1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 101;
+	background-color: #fff;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease-out;
+}
+
+.transition-1.is-active {
+	pointer-events: all;
+	opacity: 1;
+}
 
 .burger-btn {
 	position: fixed;
@@ -56,8 +72,8 @@ body {
 		right: 0;
 		height: 3px;
 		content: '';
-		background-color: rgb(255, 255, 255);
 		transition: width 0.3s;
+		background-color: rgb(255, 255, 255);
 	}
 	&__bars {
 		width: 100%;
@@ -72,7 +88,11 @@ body {
 		}
 	}
 }
-
+.burger-black,
+.burger-black::after,
+.burger-black::before {
+	background-color: rgb(0, 0, 0);
+}
 .nav-mobile {
 	position: fixed;
 	top: 0;
@@ -259,13 +279,12 @@ body {
 			border-radius: 8px;
 			box-shadow: 0px 0px 5px 0px rgba(134, 133, 133, 0.4);
 			color: rgb(78, 75, 75);
-			&_enabled {
-				color: rgb(255, 255, 255);
-				background-color: rgb(47, 203, 30);
-			}
+			transition: background-color 0.5s;
+		}
+		&-btn:hover {
+			background-color: #b3b3b3;
 		}
 		a {
-			transition: background-color 0.5s;
 			color: #000;
 			text-decoration: none;
 			font-size: 2.5rem;
@@ -425,6 +444,7 @@ body {
 		font-size: 4rem;
 	}
 	.about {
+		scroll-margin-top: 5em;
 		&__description {
 			display: flex;
 			align-items: center;
@@ -451,6 +471,7 @@ body {
 		}
 	}
 	.offer {
+		scroll-margin-top: 5em;
 		&__cards {
 			flex-direction: row;
 		}
