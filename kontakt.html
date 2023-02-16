@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest</title>
+    <link rel="stylesheet" href="dist/css/style.min.css">
+    <script src="https://kit.fontawesome.com/19533f32e4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+        <nav class="nav-mobile ">
+            <ul>
+                <li>
+                    <a href='../index.html' class="home">Strona Główna</a>
+                    <a href="#form" class="about">Kontakt</a>
+                    <a href='../oferta.html' class="offer">Oferta</a>
+                    <a href="#map" class="contactUs">Mapa</a>
+                </li>
+            </ul>
+
+
+
+        </nav>
+        <nav class="nav-desktop">
+            <div class="nav-desktop__logo"><i class="fa-solid fa-tree"></i>Forest</div>
+
+            <ul>
+                <li><a href="../index.html">Strona Główna</a>
+                    <a href="#form">Kontakt</a>
+                    <a href="../oferta.html">Oferta</a>
+                    <a href="#map">Mapa</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-btn">
+            <div class="burger-btn__box">
+                <div class="burger-btn__bars"></div>
+            </div>
+        </div>
+
+        <div class="header__img">
+            <div class="header__shadow"></div>
+            <div class="header__text">
+                <p>Forest Group</p>
+                <h1>Najpiękniejszy park w twojej okolicy!</h1>
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+    <section class="form" id="form">
+
+
+
+        <form class="form__body">
+            <h2 class="form__title">Skontaktuj się z nami!</h2>
+
+            <label for="fname">Imię</label>
+            <input type="text" id="fname" placeholder="Podaj imię">
+
+            <label for="lname">Nazwisko</label>
+            <input type="text" id="lname" placeholder="Podaj nazwisko">
+
+
+            <label for="subject">Wiadomość</label>
+            <textarea id="subject" placeholder="Napisz swoją wiadomość"
+                oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+
+            <button class="form__btn">Wyślij</button>
+
+        </form>
+        </div>
+    </section>
+
+
+    <div class="mapouter" id="map">
+        <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=krak%C3%B3w%20jasnog%C3%B3rska%20mc&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/"></a><br>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: center;
+                    height: 500px;
+                    width: 100%;
+                    padding: 1em;
+
+                }
+            </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+            <style>
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 450px;
+                    width: 100%;
+                    border: 1px solid rgb(197, 197, 197);
+                    border-radius: 5px;
+                }
+            </style>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2021 Forest Group Company Ltd.</p>
+    </footer>
+
+
+
+
+
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
